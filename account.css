@@ -1,0 +1,454 @@
+html,
+body {
+    /* overflow: hidden; */
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: #F2F4F6;
+}
+
+.profile-avatar img {
+    width: 10rem;
+    height: auto;
+}
+
+.subscribe-link {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.list {
+    background: #1B1B1B;
+    height: 100vh;
+}
+
+input type[text] {
+    background-color: white;
+    height: 2rem;
+}
+
+.center {
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, 50%);
+    /* padding: 10px; */
+}
+
+.logOut {
+    top: 90%;
+    transform: translate(0%, 150%);
+}
+
+#account-overview,
+#change-network,
+#change-password {
+    border: .1rem black solid;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    height: 88vh;
+}
+
+.form-control,
+.input-group-text,
+.modal-content {
+    border-radius: revert !important;
+}
+
+input[type="text"] {
+    padding: .5rem;
+}
+
+input {
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+}
+
+input[type="password"],
+.loginInput input[type="text"],
+.loginInput input[type="tel"] {
+    border: .1rem black solid;
+}
+
+.btn-cancel:hover,
+.btn-cancel2:hover,
+.btn-cancel3:hover,
+.btn-cancel4:hover {
+    border: .1rem red solid;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+    color: white !important;
+    text-decoration: none;
+}
+
+.active {
+    border: .1rem white solid;
+    border-radius: 10px;
+    padding-right: 6rem;
+    width: inherit;
+}
+
+.displaybutton1,
+.displaybutton2,
+.displaybutton3,
+.displaybutton4 {
+    display: none;
+}
+
+.is-open {
+    display: block;
+}
+
+.sidebar a.active {
+    color: #fff;
+}
+
+.sidebar a:hover:not(.active) {
+    color: white;
+}
+
+div.tab-content {
+    margin-left: 450px;
+    padding: 1px 30px 1px 30px;
+    height: 100%;
+}
+
+.sidebar ul>li {
+    list-style: none;
+}
+
+.fa {
+    color: #fff;
+}
+
+.sidebar ul>li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: right;
+    }
+
+    div.tab-content {
+        margin-left: 0;
+    }
+
+    #subscribe {
+        display: none !important;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+
+    .closebtn a {
+        float: right !important;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 85vh;
+    }
+
+    /* .sidebar ul>li a {
+        margin-left: unset !important;
+        padding-right: unset !important;
+    } */
+}
+
+@media only screen and (min-width:320px) {
+    .sidebar {
+        margin: 0;
+        padding: 0 30px;
+        width: 200px;
+        background-color: #1F1F1F;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        display: none;
+        z-index: 99;
+    }
+
+    .sidebar li {
+        display: block;
+        color: #FFFFFF;
+        padding: 16px 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .closebtn {
+        font-size: 2rem;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hambuger {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 88vh;
+    }
+
+    .input-group-text {
+        display: none;
+    }
+
+    /* .sidebar ul>li a {
+        margin-left: unset !important;
+        padding-right: unset !important;
+    } */
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .fa-home,
+    .fa-pencil,
+    .fa-eraser,
+    .fa-mobile {
+        padding-left: unset !important;
+        padding-right: .5rem !important;
+    }
+
+    .sidebar {
+        margin: 0;
+        padding: 0 30px;
+        width: 315px;
+        background-color: #1F1F1F;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        display: none;
+        z-index: 99;
+    }
+
+    .sidebar li {
+        display: block;
+        color: #FFFFFF;
+        padding: 16px 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .closebtn {
+        font-size: 2rem;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hambuger {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 88vh;
+    }
+
+    #resetPassword {
+        margin-bottom: 2rem;
+    }
+
+    .active {
+        /* padding-right: unset; */
+        width: inherit;
+        padding: .5rem;
+    }
+
+    .center {
+        transform: translate(0%, 20%);
+    }
+
+    .sidebar ul>li a {
+        margin-left: unset !important;
+        padding-right: .5rem !important;
+    }
+
+    .input-group-text {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        margin: 0;
+        padding: 0 30px;
+        width: 350px;
+        background-color: #1F1F1F;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        display: block;
+        z-index: 99;
+    }
+
+    .sidebar li {
+        display: block;
+        color: #FFFFFF;
+        padding: 16px 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .closebtn {
+        font-size: 2rem;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hambuger {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 85vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        z-index: 99;
+    }
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .closebtn {
+        font-size: 2rem;
+        display: none;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hambuger {
+        display: none;
+    }
+
+    div.tab-content {
+        margin-left: 400px;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 85vh;
+    }
+
+    .input-group-text {
+        display: block;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        background-color: #000;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        z-index: 99;
+    }
+
+    #account-overview,
+    #change-network,
+    #change-password {
+        height: 95vh;
+    }
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .input-group-text {
+        display: block;
+    }
+
+    .closebtn {
+        font-size: 2rem;
+        display: none;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hambuger {
+        display: none;
+    }
+
+    div.tab-content {
+        margin-left: 450px;
+    }
+}

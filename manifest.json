@@ -1,0 +1,43 @@
+{
+  "name": "9ijakids Mobile",
+  "short_name": "9ijakids",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#5fa73b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icons/logo-72.png",
+      "type": "image/png", "sizes": "72x72"
+    },
+    {
+      "src": "images/icons/logo-96.png",
+      "type": "image/png", "sizes": "96x96"
+    },
+    {
+      "src": "images/icons/logo-128.png",
+      "type": "image/png","sizes": "128x128"
+    },
+    {
+      "src": "images/icons/logo-144.png",
+      "type": "image/png", "sizes": "144x144"
+    },
+    {
+      "src": "images/icons/logo-152.png",
+      "type": "image/png", "sizes": "152x152"
+    },
+    {
+      "src": "images/icons/logo-192.png",
+      "type": "image/png", "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/logo-384.png",
+      "type": "image/png", "sizes": "384x384"
+    },
+    {
+      "src": "images/icons/logo-512.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}

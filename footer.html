@@ -1,0 +1,269 @@
+<style>
+    body {
+        overflow-x: hidden;
+        font-size: 21px;
+    }
+    .page-footer {
+        left: 0;
+        bottom: 0;
+        margin-bottom: -50px;
+        width: 100%;
+        background-color: #707070;
+        color: white;
+        text-align: center;
+    }
+    hr {
+        color: #525151;
+    }
+    a {
+        color: white;
+    }
+    a:hover {
+        color: white;
+        cursor: pointer;
+    }
+    .logo img {
+        position: relative;
+        top: 40%;
+        left: 20%;
+    }
+    .social-media{
+        position: relative;
+    }
+    div.links {
+        position: absolute;
+        bottom: 38px;
+        left: -7rem;
+        right: 0;
+    }
+    div.social-media ul{
+        float: none;
+        display: inline-block;
+    }
+    .information {
+        position: relative;
+        left: 10%;
+    }
+    h6 {
+        display: none;
+    }
+    .footer-copyright {
+        font-size: 14px;
+    }
+    .footer, .Useful-info {
+        text-align: left;
+    }
+    @media only screen and (max-width : 767px) {
+        body {
+            font-size: 21px !important;
+            overflow-x: hidden;
+        }
+        .top-image img {
+            left: unset;
+        }
+        
+        .page-footer {
+            background-color: white;
+        }
+        .logo img {
+            width: 7rem !important;
+            left: 0;
+            padding-top: 2rem;
+        }
+        a {
+            color: #707070;
+        }
+        a:hover {
+            color: black;
+            cursor: unset;
+        }
+        .footer a, .Useful-info {
+            display: none;
+        }
+        #mailAddress a{
+            display: inline;
+            color: blue !important;
+        }
+
+        .Contact-us {
+            text-align: center;
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .email {
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-weight: 800;
+        }
+        h6 {
+            display: block;
+            text-align: left;
+            /* color: #707070; */
+            font-size: 21px !important;
+        }
+        .dropdown {
+            float: right;
+        }
+        .faq {
+            background-color: #8Bd9d9;
+            color: black;
+            padding: 0 1rem 
+        }
+        .privacy {
+            background-color: #f29f06;
+            padding: 0 1rem 
+        }
+        .terms {
+            background-color: #61A641 !important;
+            padding: 0 1rem 
+        }
+        .contact {
+            background-color: #61A641 !important;
+        }
+        #faq, #privacy, #terms, #contact, .social-media ul {
+            text-align: left !important;
+        }
+        #faq h1, #privacy h1, #terms h1, #contact h1 {
+            margin-top: unset !important;
+        }
+        .faqheader, .privacyheader, .termsheader, .contactheader {
+            font-weight: 800;
+            text-align: left !important;
+            padding-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 28px;
+        }
+        .info{
+            font-size: 14px !important;
+        }
+        .footer-row {
+            display: block !important;
+        }
+        .social-media {
+            bottom: -70px
+        }
+        .social-media ul{
+            margin-top: unset;
+            margin-left: -90px;
+        }
+        #subscribe {
+            display: block;
+        }
+        #subscribe:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #707070;
+        }
+    }
+</style>
+<body>
+
+<!-- Footer -->
+<footer class="page-footer">
+    <div class="row footer-row">
+        <div class="col logo" >
+            <img src="images/logo.png" alt="logo" style="width: 7rem;">
+        </div>
+        <div class="col pt-5 information-div">
+            <!-- <a href="#" class="bold">Useful Information</a> -->
+            <!-- <h5 class="mb-3 pl-5 font-weight-bold Useful-info">Useful Information</h5>
+            <h6 class="mb-4 pl-4 pr-4 font-weight-bold Useful-info-2">Useful Information</h6> -->
+            <!-- Subscribe --> 
+            <!-- <div class="mb-2 pr-4 footer">
+                <a href="#subscribe-div" class="pl-5 subscribe-link">Subscribe</a>
+                <h6 class="mb-4 pl-4"><a href="#subscribe-div" id="subscribe">Subscribe</a></h6>
+            </div> -->
+            <!-- privacy -->
+            <div class="mb-2 footer">
+                <a href="privacy.html"class="pl-5">Privacy</a>
+                <h6 class="mb-4 pl-4 pr-4" data-toggle="collapse" href="#privacy" role="button"
+                aria-expanded="false" aria-controls="igofer-about">Privacy<span class="dropdown"><i class="fas fa-angle-down"></i></span></h6>
+
+                <div class="collapse privacy" id="privacy"></div>
+            </div>
+            <!-- faq -->
+            <div class="mb-2 footer">
+                <a href="faq.html" class="pl-5">FAQ</a>
+                <h6 class="mb-4 pl-4 pr-4" data-toggle="collapse" href="#faq" role="button"
+                aria-expanded="false" aria-controls="faq">FAQ<span class="dropdown"><i class="fas fa-angle-down"></i></span></h6>
+
+                <div class="collapse faq" id="faq"></div>
+            </div>
+            <!-- Terms -->
+            <div class="mb-2 footer">
+                <a href="terms.html" class="pl-5">Terms</a>
+                <h6 class="mb-4 pl-4 pr-4" data-toggle="collapse" href="#terms" role="button"
+                aria-expanded="false" aria-controls="terms">Terms<span class="dropdown"><i class="fas fa-angle-down"></i></span></h6>
+
+                <div class="collapse terms" id="terms"></div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mb-2 footer">
+                <a href="contactUs.html" class="pl-5">Contact</a>
+                <h6 class="mb-4 pl-4 pr-4" data-toggle="collapse" href="#contact" role="button"
+                aria-expanded="false" aria-controls="contact">Contact<span class="dropdown"><i class="fas fa-angle-down"></i></span></h6>
+
+                <div class="collapse terms" id="contact"></div>
+            </div>
+        </div>
+        <div class="col">
+        <div class="div">
+            <!-- Social media links -->
+            <hr class="clearfix w-100 d-md-none">
+            <div class="pl-2 links">
+                <div class="col mx-auto social-media">
+                    <ul class="list-unstyled list-inline text-muted">
+                        <li class="list-inline-item">
+                            <a href="https://9ijakids.com/9ijakids_footer/" target="blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="list-inline-item">
+                            <a href="https://wa.me/2349033854783" target="blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li> -->
+                        <li class="list-inline-item">
+                            <a href="https://9ijakids.com/9ijakids_footer/" target="blank">
+                                <i class="fab fa-twitter"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://9ijakids.com/9ijakids_footer/" target="blank">
+                                <i class="fab fa-linkedin-in"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://9ijakids.com/9ijakids_footer/" target="blank">
+                                <i class="fab fa-instagram"> </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div> 
+        </div> 
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center pt-2 pb-2" style="color: #707070; background-color: white;">Copyright 9ijakids © 2020-2021 All rights reserved..
+    </div>
+
+</footer>
+<Script>
+    //faq div
+    $( "#faq" ).load( "faq.html div#faq" );
+
+    //privacy div
+    $( "#privacy" ).load( "privacy.html div#privacy" );
+
+    //privacy div
+    $( "#terms" ).load( "terms.html div#terms" );
+
+    //contactUs div 
+    $( "#contact" ).load( "contactUs.html div#contact" );
+    
+</Script>

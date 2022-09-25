@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<div lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+      <link rel="manifest" href="manifest.json" />
+
+      <!-- ios support -->
+      <link rel="apple-touch-icon" href="images/icons/logo-72.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-96.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-128.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-144.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-152.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-192.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-384.png" />
+      <link rel="apple-touch-icon" href="images/icons/logo-512.png" />
+      <meta name="apple-mobile-web-app-status-bar" content="#5fa73b" />
+      <meta name="theme-color" content="#5fa73b" />
+
+      <!-- font awesome link-->
+      <script src="https://kit.fontawesome.com/c4b75b0548.js" crossorigin="anonymous"></script>
+      <title>9ijakids Mobile</title>
+   </head>
+   <style>
+      html,
+      body {
+         background-image: url("images/Group 476.png");
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         background-color: #868686;
+         font-family: "Nunito", sans-serif;
+         font-size: 1rem;
+         color: #707070;
+         overflow-x: hidden;
+         max-width: 100vw;
+         max-height: 100vh;
+         scroll-behavior: smooth;
+      }
+
+      .top-image img {
+         margin-left: 4rem !important;
+      }
+
+      h2,
+      .monthly,
+      .card-background {
+         font-weight: 800;
+      }
+
+      .top-image {
+         margin-top: 11rem;
+      }
+
+      .select {
+         font-weight: 700;
+      }
+
+      .card-body {
+         padding: 2rem 3rem !important;
+      }
+
+      .top-image img {
+         width: 10rem;
+         height: 10rem;
+         position: relative;
+         top: 0rem;
+      }
+
+      .background {
+         background-color: white;
+         margin: -2.5rem 0 4rem 0;
+         padding: 2rem 1rem 1rem;
+      }
+
+      .card-background {
+         background-color: white;
+         padding: 2rem;
+      }
+
+      .number-img img {
+         width: 4rem;
+         position: absolute;
+         margin: -1rem 0 0 -3rem;
+      }
+
+      #login-error {
+         font-size: 16px;
+      }
+
+      .alert {
+         padding: .5rem 1rem !important;
+      }
+
+      li {
+         list-style: none;
+      }
+
+      .phone-div input[type="tel"] {
+         border: .1rem #707070 solid;
+         width: 15rem;
+         padding: .5rem 1rem;
+         font-size: 16px;
+         border-radius: 4px;
+      }
+
+      .phone-div input[type="tel"]:focus {
+         border: 1px solid red;
+         outline: 1px solid red;
+         border-radius: 0;
+
+      }
+
+      .switch {
+         position: relative;
+         display: inline-block;
+         width: 60px;
+         height: 34px;
+      }
+
+      .switch input {
+         opacity: 0;
+         width: 0;
+         height: 0;
+      }
+
+      .slider {
+         position: absolute;
+         cursor: pointer;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: #fff;
+         -webkit-transition: .4s;
+         transition: .4s;
+      }
+
+      .input-check,
+      .slider:before {
+         position: absolute;
+         content: "";
+         height: 34px;
+         width: 32px;
+         left: -1.5px;
+         top: -1.5px;
+         bottom: 4px;
+         background-color: white;
+         -webkit-transition: .4s;
+         transition: .4s;
+         cursor: pointer;
+      }
+
+      .input-check,
+      input:checked+.slider {
+         background-color: #fff;
+      }
+
+      .input-check,
+      input:focus+.slider {
+         box-shadow: 0 0 1px #fff;
+      }
+
+      .input-check,
+      input:checked+.slider:before {
+         -webkit-transform: translateX(28px);
+         -ms-transform: translateX(28px);
+         transform: translateX(28px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+         border-radius: 34px;
+         border: .1rem red solid;
+      }
+
+      .slider.round:before {
+         border-radius: 50%;
+         background-color: red;
+      }
+
+      .select label {
+         border: 1px solid #CCC;
+         background: white;
+      }
+
+      .yellow label {
+         cursor: pointer;
+         color: #FFC000;
+      }
+
+      .green label {
+         cursor: pointer;
+         color: #A6C022;
+      }
+
+      .blue label {
+         cursor: pointer;
+         color: #40C2F2;
+      }
+
+      .radio-toolbar input[type="radio"] {
+         display: none;
+      }
+
+      .radio-toolbar label {
+         display: inline-block;
+         background: #FFF;
+         font-size: 18px;
+         width: 106px;
+         height: 30px;
+         border: 1px solid #fff;
+         border-radius: 4px;
+      }
+
+      .radio-toolbar [type="radio"]:checked+label {
+         background: #fff;
+         color: #000;
+         border: 2px solid #000;
+      }
+
+      .radio1 [type="radio"]:checked+label {
+         color: yellow;
+      }
+
+      .radio2 input[type="radio"]:checked+label {
+         color: blue;
+      }
+
+      .radio-toolbar label:hover {
+         background-color: #bbb;
+         color: #FFF;
+      }
+
+      .radio2 label:hover {
+         background-color: #bbb;
+      }
+
+      .tel-error {
+         font-size: 14px !important;
+      }
+
+      @media only screen and (max-width : 767px) {
+         .top-image {
+            margin-left: unset !important;
+         }
+
+         .top-image img {
+            margin-left: 2rem !important;
+         }
+
+         input[type="tel"] {
+            width: 67% !important;
+         }
+
+         .text {
+            width: unset !important;
+         }
+
+         .cards {
+            padding-top: 2rem;
+         }
+
+         .oneTime,
+         .auto,
+         .card-body,
+         .card-background {
+            padding: .5rem !important;
+         }
+
+         .plans {
+            flex-wrap: nowrap !important;
+         }
+
+         .monthly,
+         .card-text {
+            font-size: 1rem !important;
+         }
+
+         .col-cards {
+            margin: 0 .5rem;
+            padding-right: unset !important;
+            padding-left: unset !important;
+         }
+
+         .radio-toolbar label {
+            font-size: 14px;
+            width: unset !important;
+            height: unset !important;
+         }
+
+         .categories img {
+            width: 100%;
+            height: auto;
+         }
+
+         .groupings {
+            display: grid;
+         }
+      }
+
+      @media only screen and (min-width : 768px) {
+         .card-body {
+            padding: 1.25rem !important;
+         }
+
+         .card-background {
+            padding: 1rem;
+         }
+      }
+
+      @media only screen and (min-width : 1200px) {
+         .card-body {
+            padding: 2rem 3rem !important;
+         }
+
+         .card-background {
+            padding: 2rem;
+         }
+
+      }
+   </style>
+
+   <div>
+      <div class="top-image ml-5">
+         <img src="images/Image 1@2x.png" class="card-img-top">
+      </div>
+      <div class="background ">
+         <div class="container">
+            <h2 class="text-sm-start text-lg-center text-md-center">Play. Learn. Practice. Excel</h2>
+            <p class="text text-sm-start text-lg-center text-md-center mx-auto" style="width: 30rem;">Help your child
+               excel in any subject from as little as ₦20! We make learning fun and effortless</p>
+            <h5 class="text-sm-start text-lg-center text-md-center pt-4"><span class="text-danger bold">Have an
+                  account?</span> Enter your phone number to login</h5>
+            <!-- <form> -->
+            <div class="pt-2 text-sm-start text-lg-center text-md-center phone-div">
+               <form onsubmit="submitForm(event)">
+                  <input type="tel" id="telephone" minlength="11" maxlength="13" placeholder="Enter Glo number"
+                     class="phone-no">
+                  <button class="btn-submit btn btn-success p-2">Submit</button>
+                  <p class="tel-error text-center pt-2"></p>
+               </form>
+
+            </div>
+            <!-- </form> -->
+
+            <p class="text-center">or</p>
+            <p class="text-sm-start text-lg-center text-md-center">Please select a subscription plan to continue</p>
+            <h2 class="text-sm-start text-lg-center text-md-center">Subscription Plans</h2>
+            <!-- Rounded switch -->
+            <div class="row mt-4 mb-3" id="subscribe-div">
+               <div class="col text-sm-start text-lg-center text-md-center button-div">
+                  <span class="pr-4 oneTime">One-time</span>
+                  <label class="switch mx-auto">
+                     <input type="checkbox" class="checkbox">
+                     <span class="slider round"></span>
+                  </label>
+                  <span class="pl-4 auto">Auto-renew</span>
+               </div>
+            </div>
+
+            <div class="slidingDiv">
+               <div class="row plans">
+                  <div class="col cards col-cards">
+                     <div class="card text-center mx-auto" style=" background-color: #FFC000;">
+                        <div class="card-body">
+                           <h5 class="card-title monthly">Daily</h5>
+                           <h1 class="card-text card-background">₦20</h1>
+                           <div class="radio-toolbar yellow select">
+                              <input type="radio" id="radio1" name="radios" value="nkdo" class="plan">
+                              <label for="radio1">Select</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-cards cards">
+                     <div class="card text-center mx-auto" style="background-color: #A6C022;">
+                        <div class="card-body">
+                           <h5 class="card-title monthly">Weekly</h5>
+                           <h1 class="card-text card-background">₦50</h1>
+                           <div class="radio-toolbar green select">
+                              <input type="radio" id="radio2" name="radios" value="nkwo" class="plan">
+                              <label for="radio2">Select</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-cards cards">
+                     <div class="card text-center mx-auto" style="background-color: #40C2F2;">
+                        <div class="card-body">
+                           <h5 class="card-title monthly">Monthly</h5>
+                           <h1 class="card-text card-background">₦200</h1>
+                           <div class="radio-toolbar blue select">
+                              <input type="radio" id="radio3" name="radios" value="nkmo" class="plan">
+                              <label for="radio3">Select</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="category">
+            </div>
+         </div>
+
+      </div>
+
+      <div class="modal fade" tabindex="-1" id="login">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">Login</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Phone</span>
+                     </div>
+                     <input type="tel" class="form-control" placeholder="Phone" id="login-phone" aria-label="Phone">
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Password</span>
+                     </div>
+                     <input type="password" class="form-control" placeholder="Password" id="login-password"
+                        aria-label="Password">
+                  </div>
+                  <div id="login-error" class="alert alert-danger" role="alert"></div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="signup">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">Create an Account</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Phone</span>
+                     </div>
+                     <input type="tel" required class="form-control" placeholder="phone" id="signup-phone"
+                        aria-label="Phone">
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <label class="input-group-text" for="signup-network">Network</label>
+                     </div>
+                     <select class="custom-select" id="signup-network" onchange="networkChanged(this.value)">
+                        <option value="glo" selected>Glo</option>
+                        <option value="mtn">MTN</option>
+                        <option value="card">Bank Card</option>
+                     </select>
+                  </div>
+                  <div class="input-group mb-3" id="glo-packages">
+                     <div class="input-group-prepend">
+                        <label class="input-group-text" for="signup-network">Subscription</label>
+                     </div>
+                     <select class="custom-select hidden" id="signup-glo-package">
+                        <option value="nkdo">One Day (₦20)</option>
+                        <option value="nkda">Every Day (₦20)</option>
+                        <option value="nkwo">One Week (₦50)</option>
+                        <option value="nkwa">Every Week (₦50)</option>
+                        <option value="nkmo">One Month (₦200)</option>
+                        <option value="nkma">Every Month (₦200)</option>
+                     </select>
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Name</span>
+                     </div>
+                     <input type="text" required class="form-control" placeholder="what's your name?" id="signup-name"
+                        aria-label="Name">
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Email</span>
+                     </div>
+                     <input type="email" required class="form-control" placeholder="email address" id="signup-email"
+                        aria-label="Email">
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Address</span>
+                     </div>
+                     <textarea class="form-control" placeholder="home address" id="signup-address"
+                        aria-label="Address"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Password</span>
+                     </div>
+                     <input type="password" required class="form-control" placeholder="choose a password"
+                        id="signup-password" aria-label="Password">
+                  </div>
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Confirm</span>
+                     </div>
+                     <input type="password" class="form-control" placeholder="confirm password"
+                        id="signup-confirm-password" aria-label="Confirm Password">
+                  </div>
+                  <div id="signup-error" class="alert alert-danger" role="alert">
+
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="signUp()">Sign Up</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="Confirmation">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h5 class="modal-title">Have you confirmed the subscription on your phone?
+                  </h5>
+               </div>
+               <div class="modal-body text-center">
+                  <button type="button" class="btn btn-primary mr-3" id="Yes" data-dismiss="modal"
+                     aria-label="">Yes</button>
+                  <button type="button" class="btn btn-primary ml-3" id="No" data-dismiss="modal">No</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal" tabindex="-1" role="dialog" id="Subscription">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">Please Subscribe Again</h5>
+               </div>
+               <div class="modal-body">
+                  <div class="input-group mb-3 mt-3" id="glo-packages">
+                     <div class="input-group-prepend">
+                        <label class="input-group-text" for="signup-network">Subscription</label>
+                     </div>
+                     <select class="custom-select hidden" id="subscribe-again">
+                        <option value="nkdo">One Day (₦20)</option>
+                        <option value="nkda" selected>Every Day (₦20)</option>
+                        <option value="nkwo">One Week (₦50)</option>
+                        <option value="nkwa">Every Week (₦50)</option>
+                        <option value="nkmo">One Month (₦200)</option>
+                        <option value="nkma">Every Month (₦200)</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="subscribe"
+                     onclick="subscribeAgain()">Subscribe</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- <div class="modal" id="signup"></div> -->
+   <!-- <div class="modal fade" tabindex="-1" id="login"></div> -->
+
+   <div id="footer"></div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $('#login-error').hide();
+         $('#signup-error').hide();
+      });
+      var req = new XMLHttpRequest();
+      req.open('GET', document.location, false);
+      req.send(null);
+      var headers = req.getAllResponseHeaders();
+      console.log(headers);
+      var arr = headers.trim().split(/[\r\n]+/);
+      var headerMap = {};
+      arr.forEach(function (line) {
+         var parts = line.split(': ');
+         var header = parts.shift();
+         var value = parts.join(': ');
+         headerMap[header] = value;
+      });
+      if (headerMap.MSISDN) {
+         $('#telephone').val(headerMap.MSISDN);
+         checkStatus(headerMap.MSISDN);
+      }
+      // games Category 
+      $("#category").load("info.html div#category");
+      //footer
+      $(function () {
+         $('#footer').load('footer.html');
+      })
+      // hide and show subscription cards
+      var control = document.querySelector('.checkbox');
+
+      function toggle() {
+         //console.log(control.checked)
+         if (control.checked == true) {
+            $('#radio1').val('nkda');
+            $('#radio2').val('nkwa');
+            $('#radio3').val('nkma');
+         } else {
+            $('#radio1').val('nkdo');
+            $('#radio2').val('nkwo');
+            $('#radio3').val('nkmo');
+         }
+      };
+      control.addEventListener('change', toggle)
+
+      var phoneNo = $('.phone-no').value
+      //get all radio buttons
+      const plan = document.querySelectorAll('.plan');
+
+      //get value of radio button e.g 20, 50, 200
+      function getValue(val) {
+         const selected = Array.from(val).filter(button => button.checked).reduce((acc, next) => acc + next.value, "");
+         return selected;
+      }
+
+      //on click of each button show modal to enter phone number
+      plan.forEach((button) => button.addEventListener('click', () => {
+         $('#telephone').trigger('focus')
+      }))
+
+      // modals 
+      const glo = 'glo';
+      $("#login").on('shown.bs.modal', function () {
+         $('#login').trigger('focus')
+      });
+      $("#signup").on('shown.bs.modal', function () {
+         $('#signup').trigger('focus')
+      });
+
+      const btnSubmit = document.querySelector('.btn-submit');
+      const telValue = document.querySelector('#telephone');
+      const telError = document.querySelector('.tel-error');
+      //  let telephone = $("#telephone").val();
+      //  console.log(telephone)
+      // Check if number exists 
+      async function checkStatus(tel) {
+         if (tel.length < 11)
+            return;
+         // console.log(tel)
+         const resp = await fetch('api2.php/checkStatus', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+               phone: tel
+            })
+         });
+         const status = await resp.json();
+         if (status.success === true) {
+            var today = new Date();
+            var date = today.toISOString().slice(0, 10) // YYYY-MM-DD
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = (`${date} ${time}`);
+            var expiry = status.data.expires;
+            if (expiry > dateTime) {
+               // $('#check-status').modal('hide')
+               $("#login-phone").val(tel);
+               $("#login").modal();
+            } else {
+               $('#subscribe-again option').filter(function () {
+                  return $(this).val() === getValue(plan)
+               }).prop('selected', true);
+               $("#Subscription").modal();
+            }
+         } else {
+            // $('#check-status').modal('hide')
+            $("#signup-phone").val(tel);
+            //const selectedPlan = localStorage.getItem('selectedPlan')
+
+            $('#signup-glo-package option').filter(function () {
+               return $(this).val() === getValue(plan)
+            }).prop('selected', true);
+            $('#signup').modal();
+         }
+      }
+
+
+      btnSubmit.addEventListener('click', () => {
+         if (telValue.value === '') {
+            telError.innerHTML = 'Please enter a phone number';
+            telError.style.color = 'red';
+         } else if (telValue.value.length < 11 || telValue.value.length > 13) {
+            telError.innerHTML = 'Please enter a valid phone number';
+            telError.style.color = 'red';
+         } else {
+            telError.innerHTML = '';
+            telError.style.color = '';
+            checkStatus(telValue.value)
+         }
+
+      })
+      telValue.addEventListener('input', () => {
+         telError.innerHTML = '';
+         telError.style.color = '';
+      })
+      // const planSubAgain = (text) => {
+      //    let planSub;
+      //    console.log(text);
+      //    if (text == "One Day (₦20)" || text == "Every Day (₦20)") {
+      //       planSub = "Daily";
+      //    } else if (text == "One Week (₦50)" || text == "Every Week (₦50)") {
+      //       planSub = "Weekly";
+      //    } else if (text == "One Month (₦200)" || text == "Every Month (₦200)") {
+      //       planSub = "Monthly"
+      //    }
+      //    return planSub;
+      // }
+      async function login() {
+         const errors = [];
+         if (!$("#login-phone").val() || $("#login-phone").val().length < 10)
+            errors.push('Phone should be at least 10 digits');
+         if (!$('#login-password').val())
+            errors.push('Password must not be less than 8 characters');
+         let error = '';
+         for (const err of errors)
+            error += '<li>' + err + '</li>';
+         if (error.length > 0) {
+            error = '<ul style = "margin-bottom: 0rem !important;">' + error + '</ul>';
+            $('#login-error').html(error);
+            $('#login-error').show()
+            $('#login-error').delay(5000).fadeOut('fast');
+            return;
+         }
+         const req = {
+            phone: $("#login-phone").val(),
+            password: $("#login-password").val()
+         }
+         fetch('api2.php/login', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(req)
+            }).then(resp => resp.json())
+            .then(data => {
+               console.log(data)
+               if (data.success) {
+                  //window.user = data.message;
+                  sessionStorage.setItem('user', JSON.stringify(data.message))
+                  window.location.href = "/home.html";
+               } else {
+                  var error = String(data.error);
+                  $('#login-error').html(error);
+                  $('#login-error').show()
+                  $('#login-error').delay(5000).fadeOut('fast');
+               }
+            });
+      }
+      async function signUp() {
+         const errors = [];
+         if (!$("#signup-phone") || $("#signup-phone").val().length < 10)
+            errors.push('Phone should be at least 10 digits');
+         const password = $('#signup-password').val();
+         if (password !== $('#signup-confirm-password').val())
+            errors.push('Password does not match');
+         if (password.length < 4)
+            errors.push('Password should be at least 4 chars');
+         if (!$('#signup-email') || $('#signup-email').val().length < 5)
+            errors.push('Email is invalid, need min 5 chars')
+         if (!$('#signup-name') || $('#signup-name').val().length < 5)
+            errors.push('Name is invalid, need min 5 chars')
+         let error = '';
+         for (const err of errors)
+            error += '<li>' + err + '</li>';
+         if (error.length > 0) {
+            error = '<ul>' + error + '</ul>';
+            $('#signup-error').html(error);
+            $('#signup-error').show()
+            $('#login-error').fadeOut('fast');
+            return;
+         }
+         const req = {
+            phone: $("#signup-phone").val(),
+            password: $("#signup-password").val(),
+            email: $("#signup-email").val(),
+            name: $("#signup-name").val(),
+            network: $("#signup-network").val(),
+            address: $("#signup-address").val(),
+            // plan: planSubAgain($("#signup-glo-package option:selected").text())
+         };
+         console.log(req)
+         if (req.network === glo)
+            req.package = $("#signup-glo-package").val();
+         fetch('api2.php/signup', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(req)
+            }).then(resp => resp.json())
+            .then(data => {
+               if (data.success) {
+                  $('#signup').modal('hide');
+                  $('#Confirmation').modal();
+                  $('#Yes').on('click', function () {
+                     $('#Confirmation').modal('hide');
+                     $("#login-phone").val(req.phone);
+                     $("#login").modal();
+                  })
+                  $('#No').on('click', function () {
+                     $('#Confirmation').modal('hide');
+                     $("#Subscription").modal();
+                  })
+               } else {
+                  $('#signup-error').html(data.error);
+               }
+            }).catch(err => {
+               $('#signup-error').html(err);
+               console.log(err);
+            });
+      }
+      // Subscribe again
+      async function subscribeAgain() {
+         try {
+            const req = {
+               phone: $("#telephone").val(),
+               network: $("#signup-network").val(),
+               // plan: planSubAgain($("#subscribe-again option:selected").text())
+            };
+            console.log(req)
+            if (req.network === glo)
+               req.package = $("#signup-glo-package").val();
+            // console.log(req.package)
+            let response = await fetch('api2.php/subscribeAgain', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(req)
+
+            });
+            let data = await response.json()
+            //console.log(data)
+            if (data.success == true) {
+               console.log(data)
+               $("#Subscription").modal('hide');
+               $('#Confirmation').modal();
+               $('#Yes').on('click', function () {
+                  $('#Confirmation').modal();
+                  $("#login-phone").val(tel);
+                  $("#login").modal();
+               })
+               $('#No').on('click', function () {
+                  $('#Confirmation').modal('hide');
+                  $("#Subscription").modal();
+               })
+            }
+         } catch (error) {
+            console.log(error);
+         }
+      }
+
+      const submitForm = (e) => {
+         e.preventDefault()
+      }
+   </script>
